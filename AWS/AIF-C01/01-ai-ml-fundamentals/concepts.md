@@ -1,5 +1,8 @@
 # Esquema de Estudio Detallado: Dominio 1 (20% del Examen)
 ## Fundamentos de Inteligencia Artificial y Machine Learning (AWS AIF-C01)
+https://sites.google.com/view/infografadominio1-fundamentosi/full-page-embed
+
+https://sites.google.com/d/12uns4H6OuvYC6acmYGM_-1fp5pYGNrgS/p/1xB4L4dL8bXRs1I2aV9Mlane4__CGx12p/edit?pli=1
 
 ---
 
