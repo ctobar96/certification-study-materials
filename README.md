@@ -1,46 +1,47 @@
-# Certification Study Materials
+# Material de Estudio para Certificaciones
 
 Repositorio personal de estudio y preparación para certificaciones tecnológicas relacionadas con Cloud Computing, Data Engineering, Artificial Intelligence y Data Science.
 
-El objetivo es centralizar apuntes, ejercicios prácticos, laboratorios, cuestionarios y recursos oficiales para facilitar el aprendizaje continuo.
+El objetivo es centralizar apuntes, ejercicios prácticos, laboratorios, cuestionarios y recursos oficiales para facilitar el aprendizaje continuo y el desarrollo profesional.
 
-## Certifications
+## Certificaciones
 
 ### AWS
 
-| Certification | Code | Status |
+| Certificación | Código | Estado |
 |---|---|---|
-| AWS Certified AI Practitioner | AIF-C01 | In Progress |
-| AWS Certified Cloud Practitioner | CLF-C02 | Planned |
-| AWS Certified Data Engineer Associate | DEA-C01 | Planned |
+| AWS Certified AI Practitioner | AIF-C01 | En preparación |
+| AWS Certified Cloud Practitioner | CLF-C02 | Planificada |
+| AWS Certified Data Engineer Associate | DEA-C01 | Planificada |
 
 ### Google Cloud
 
-| Certification | Status |
+| Certificación | Estado |
 |---|---|
-| Associate Cloud Engineer | Planned |
+| Associate Cloud Engineer | Planificada |
 
 ### Microsoft
 
-| Certification | Status |
+| Certificación | Estado |
 |---|---|
-| Azure Data Fundamentals (DP-900) | Planned |
+| Azure Data Fundamentals (DP-900) | Planificada |
 
 ### Databricks
 
-| Certification | Status |
+| Certificación | Estado |
 |---|---|
-| Data Engineer Associate | Planned |
+| Data Engineer Associate | Planificada |
 
-## Repository Contents
+## Contenido del repositorio
 
-- Study Notes
-- Practical Exercises
-- Hands-on Labs
-- Practice Exams
-- Flashcards
-- Official Documentation
+- Apuntes de estudio
+- Ejercicios prácticos
+- Laboratorios (Hands-on Labs)
+- Simulacros de examen
+- Tarjetas de estudio (Flashcards)
+- Documentación oficial
+- Glosario técnico
 
-## License
+## Licencia
 
-MIT License
+Este proyecto se distribuye bajo la **Licencia MIT**.
