@@ -4,13 +4,18 @@ Repositorio personal de estudio y preparación para certificaciones tecnológica
 
 El objetivo es centralizar apuntes, ejercicios prácticos, laboratorios, cuestionarios y recursos oficiales para facilitar el aprendizaje continuo y el desarrollo profesional.
 
-## Certificaciones
+# Material de Estudio para Certificaciones
 
+![GitHub](https://img.shields.io/badge/GitHub-Study_Materials-black?logo=github)
+![Status](https://img.shields.io/badge/Status-Active-success)
+![License](https://img.shields.io/badge/License-MIT-blue)
+
+## Certificaciones
 ### AWS
 
 | Certificación | Código | Estado |
 |---|---|---|
-| AWS Certified AI Practitioner | AIF-C01 | En preparación |
+| [AWS Certified AI Practitioner](AWS/AIF-C01/README.md)| AIF-C01 | En preparación |
 | AWS Certified Cloud Practitioner | CLF-C02 | Planificada |
 | AWS Certified Data Engineer Associate | DEA-C01 | Planificada |
 
