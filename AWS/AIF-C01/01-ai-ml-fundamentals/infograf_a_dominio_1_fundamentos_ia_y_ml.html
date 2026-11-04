@@ -2,33 +2,32 @@
 <html lang="es" class="scroll-smooth">
 <head>
     <!--
-    Selected Color Palette: Vibrant Tech Executive (Slate, Brilliant Blue #2563eb, Cyan #06b6d4, Indigo #4f46e5, Amber #f59e0b, Emerald #10b981)
+    Selected Color Palette: Brilliant Tech Executive (Deep Blue #1e3a8a, Vibrant Blue #2563eb, Cyan #0891b2, Indigo #4f46e5, Emerald #059669, Amber #d97706)
     Plan Narrative Summary:
-    1. Introduction & Core Hierarchy: IA vs ML vs DL vs GenAI + Core Terminology.
-    2. ML Paradigms: Supervised, Unsupervised, Reinforcement Learning with interactive distribution & task examples.
-    3. Traditional ML Lifecycle & Drift: Step-by-step visual workflow and MLOps monitoring.
-    4. Model Trade-offs & Evaluation Metrics: Overfitting vs Underfitting curve chart, Confusion Matrix metrics, Regression metrics.
-    5. AWS Decision Matrix: Traditional ML (SageMaker) vs Generative AI (Bedrock) comparative analysis.
+    1. Header & Hero: Overview of Domain 1 (20% of AWS AIF-C01) with interactive quick-nav.
+    2. Taxonomía e Jerarquía de IA: Structural hierarchy (AI -> ML -> DL -> GenAI) and core vocabulary.
+    3. Paradigmas de Aprendizaje: Supervised, Unsupervised, and Reinforcement Learning comparisons with Doughnut Chart.
+    4. Ciclo de Vida de ML & MLOps: Step-by-step pipeline, Data Leakage, and Drift analysis (Data Drift vs Concept Drift).
+    5. Diagnóstico de Modelos & Métricas: Overfitting/Underfitting Line Chart, Confusion Matrix visual tool, and Regression metrics sensitivity bar chart.
+    6. Matriz de Decisión AWS: SageMaker vs Bedrock Radar Chart and decision workflow.
     Visualizations Selection:
-    - Overfitting/Underfitting Curve: Line Chart (Chart.js) -> Shows Train vs Validation Error trends across model complexity.
-    - ML Paradigms Distribution: Doughnut Chart (Chart.js) -> Breaks down enterprise application proportions.
-    - Classification Metrics Comparison: Bar Chart (Chart.js) -> Precision, Recall, F1-Score & Accuracy behavior.
-    - Regression Metrics Sensitivity: Horizontal Bar Chart (Chart.js) -> MAE vs MSE vs RMSE outlier penalty analysis.
-    - Solution Selection Radar: Radar Chart (Chart.js) -> Evaluates ML vs GenAI on Cost, Determinism, Data Complexity, Interpretability.
-    Confirmation: NEITHER Mermaid JS NOR SVG were used anywhere in this output. All visuals are rendered via Canvas (Chart.js) or styled HTML/CSS with Tailwind.
+    - Paradigms Breakdown: Doughnut Chart (Chart.js) -> Shows enterprise utilization ratios.
+    - Model Fitting Curve: Line Chart (Chart.js) -> Displays Train vs Validation error across complexity.
+    - Confusion Matrix & Classification Metrics: Bar Chart (Chart.js) -> Precision, Recall, F1-Score, and Accuracy.
+    - Regression Metrics Sensitivity: Horizontal Bar Chart (Chart.js) -> MAE vs MSE vs RMSE outlier penalties.
+    - AWS Solution Selection: Radar Chart (Chart.js) -> Evaluates ML vs GenAI across key architectural axes.
+    Confirmation: NEITHER Mermaid JS NOR SVG were used anywhere in this output. All visuals are rendered using Chart.js Canvas or styled HTML/CSS with Tailwind CSS.
     -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dominio 1: Fundamentos de IA y ML - AWS AIF-C01</title>
-    <!-- Tailwind CSS CDN -->
+    <title>Dominio 1: Fundamentos de IA y ML - Esquema Visual AWS AIF-C01</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Chart.js CDN -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <style>
         .chart-container {
             position: relative;
             width: 100%;
-            max-width: 600px;
+            max-width: 620px;
             margin-left: auto;
             margin-right: auto;
             height: 320px;
@@ -39,209 +38,224 @@
                 height: 350px;
             }
         }
-        .gradient-bg {
-            background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #0f172a 100%);
+        .hero-gradient {
+            background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 50%, #0f172a 100%);
         }
     </style>
 </head>
 <body class="bg-slate-50 text-slate-800 font-sans antialiased">
 
     <!-- Header Section -->
-    <header class="gradient-bg text-white py-12 px-4 sm:px-6 lg:px-8 border-b-4 border-blue-500 shadow-2xl">
+    <header class="hero-gradient text-white py-12 px-4 sm:px-6 lg:px-8 border-b-4 border-blue-500 shadow-2xl">
         <div class="max-w-7xl mx-auto text-center">
             <div class="inline-flex items-center space-x-2 bg-blue-950/80 border border-blue-400 text-blue-300 px-4 py-1.5 rounded-full text-xs sm:text-sm font-semibold mb-4 tracking-wide uppercase">
                 <span>AWS Certified AI Practitioner (AIF-C01)</span>
                 <span class="bg-blue-600 text-white px-2.5 py-0.5 rounded-full text-xs font-bold">20% del Examen</span>
             </div>
             <h1 class="text-3xl sm:text-5xl font-extrabold tracking-tight text-white mb-4">
-                Dominio 1: Fundamentos de IA y Machine Learning
+                Esquema Visual: Dominio 1 - Fundamentos de IA y ML
             </h1>
             <p class="max-w-3xl mx-auto text-slate-300 text-base sm:text-lg leading-relaxed mb-8">
-                Infografía interactiva y visualización sintética. Domina la taxonomía de IA, los paradigmas de aprendizaje, el ciclo de vida de ML, el dilema de sobreajuste/subajuste y las métricas clave para el examen.
+                Mapa conceptual interactivo y datos clave. Explora la jerarquía de la IA, algoritmos de Machine Learning, ciclo de vida de desarrollo, matriz de confusión, diagnósticos de ajuste y decisiones arquitectónicas en AWS.
             </p>
             
-            <!-- Quick Nav -->
+            <!-- Quick Navigation -->
             <nav class="flex flex-wrap justify-center gap-2 sm:gap-4 text-xs sm:text-sm font-medium">
-                <a href="#taxonomia" class="bg-slate-800 hover:bg-blue-600 text-slate-200 hover:text-white px-4 py-2 rounded-lg transition-all border border-slate-700 shadow-sm">
-                    1.1 Jerarquía y Vocabulario
+                <a href="#taxonomia" class="bg-slate-800/90 hover:bg-blue-600 text-slate-200 hover:text-white px-4 py-2 rounded-lg transition-all border border-slate-700 shadow-sm">
+                    1. Taxonomía e IA
                 </a>
-                <a href="#paradigmas" class="bg-slate-800 hover:bg-blue-600 text-slate-200 hover:text-white px-4 py-2 rounded-lg transition-all border border-slate-700 shadow-sm">
-                    1.2 Paradigmas de ML
+                <a href="#paradigmas" class="bg-slate-800/90 hover:bg-blue-600 text-slate-200 hover:text-white px-4 py-2 rounded-lg transition-all border border-slate-700 shadow-sm">
+                    2. Paradigmas de ML
                 </a>
-                <a href="#ciclo-vida" class="bg-slate-800 hover:bg-blue-600 text-slate-200 hover:text-white px-4 py-2 rounded-lg transition-all border border-slate-700 shadow-sm">
-                    1.3 Ciclo de Vida Tradicional
+                <a href="#ciclo-vida" class="bg-slate-800/90 hover:bg-blue-600 text-slate-200 hover:text-white px-4 py-2 rounded-lg transition-all border border-slate-700 shadow-sm">
+                    3. Ciclo de Vida & MLOps
                 </a>
-                <a href="#metricas" class="bg-slate-800 hover:bg-blue-600 text-slate-200 hover:text-white px-4 py-2 rounded-lg transition-all border border-slate-700 shadow-sm">
-                    1.4 Métricas & Ajuste
+                <a href="#metricas" class="bg-slate-800/90 hover:bg-blue-600 text-slate-200 hover:text-white px-4 py-2 rounded-lg transition-all border border-slate-700 shadow-sm">
+                    4. Métricas & Ajuste
                 </a>
-                <a href="#decision-aws" class="bg-slate-800 hover:bg-blue-600 text-slate-200 hover:text-white px-4 py-2 rounded-lg transition-all border border-slate-700 shadow-sm">
-                    1.5 ML vs GenAI en AWS
+                <a href="#decision-aws" class="bg-slate-800/90 hover:bg-blue-600 text-slate-200 hover:text-white px-4 py-2 rounded-lg transition-all border border-slate-700 shadow-sm">
+                    5. Selección en AWS
                 </a>
             </nav>
         </div>
     </header>
 
-    <!-- Main Content Container -->
+    <!-- Main Container -->
     <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-16">
 
-        <!-- Executive Summary KPI Bar -->
+        <!-- Core KPI Cards -->
         <section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             <div class="bg-white rounded-xl shadow-md p-6 border-l-4 border-blue-600 hover:shadow-lg transition-shadow">
                 <div class="flex items-center justify-between">
-                    <span class="text-xs font-bold uppercase tracking-wider text-slate-500">División Estándar</span>
+                    <span class="text-xs font-bold uppercase tracking-wider text-slate-500">Separación Estándar</span>
                     <span class="p-2 bg-blue-100 text-blue-800 rounded-lg font-bold text-xs">70 / 15 / 15</span>
                 </div>
                 <p class="text-2xl font-black text-slate-900 mt-2">Split de Datos</p>
-                <p class="text-xs text-slate-600 mt-1">Proporción recomendada para Entrenamiento, Validación y Prueba.</p>
+                <p class="text-xs text-slate-600 mt-1">Entrenamiento (Train), Validación (Val) y Prueba (Test).</p>
             </div>
 
             <div class="bg-white rounded-xl shadow-md p-6 border-l-4 border-cyan-500 hover:shadow-lg transition-shadow">
                 <div class="flex items-center justify-between">
-                    <span class="text-xs font-bold uppercase tracking-wider text-slate-500">Error Crítico</span>
+                    <span class="text-xs font-bold uppercase tracking-wider text-slate-500">Error Más Peligroso</span>
                     <span class="p-2 bg-cyan-100 text-cyan-800 rounded-lg font-bold text-xs">FN (Tipo II)</span>
                 </div>
                 <p class="text-2xl font-black text-slate-900 mt-2">Falsos Negativos</p>
-                <p class="text-xs text-slate-600 mt-1">El error más costoso en salud y detección de fraudes bancarios.</p>
+                <p class="text-xs text-slate-600 mt-1">Crítico en fraudes bancarios y diagnósticos de salud.</p>
             </div>
 
             <div class="bg-white rounded-xl shadow-md p-6 border-l-4 border-indigo-600 hover:shadow-lg transition-shadow">
                 <div class="flex items-center justify-between">
-                    <span class="text-xs font-bold uppercase tracking-wider text-slate-500">Métrica Robusta</span>
+                    <span class="text-xs font-bold uppercase tracking-wider text-slate-500">Métrica Desequilibrada</span>
                     <span class="p-2 bg-indigo-100 text-indigo-800 rounded-lg font-bold text-xs">F1-Score</span>
                 </div>
                 <p class="text-2xl font-black text-slate-900 mt-2">Media Armónica</p>
-                <p class="text-xs text-slate-600 mt-1">Equilibrio óptimo entre Precisión y Recall en clases desequilibradas.</p>
+                <p class="text-xs text-slate-600 mt-1">Balance óptimo entre Precisión (Precision) y Exhaustividad (Recall).</p>
             </div>
 
             <div class="bg-white rounded-xl shadow-md p-6 border-l-4 border-emerald-500 hover:shadow-lg transition-shadow">
                 <div class="flex items-center justify-between">
-                    <span class="text-xs font-bold uppercase tracking-wider text-slate-500">Plataforma AWS</span>
-                    <span class="p-2 bg-emerald-100 text-emerald-800 rounded-lg font-bold text-xs">SageMaker</span>
+                    <span class="text-xs font-bold uppercase tracking-wider text-slate-500">Plataforma Principal</span>
+                    <span class="p-2 bg-emerald-100 text-emerald-800 rounded-lg font-bold text-xs">SageMaker AI</span>
                 </div>
-                <p class="text-2xl font-black text-slate-900 mt-2">ML Tradicional</p>
-                <p class="text-xs text-slate-600 mt-1">Servicio central para construir, entrenar y monitorear modelos en AWS.</p>
+                <p class="text-2xl font-black text-slate-900 mt-2">MLOps en AWS</p>
+                <p class="text-xs text-slate-600 mt-1">Entrenamiento, Data Wrangler, Autopilot y Model Monitor.</p>
             </div>
         </section>
 
-        <!-- SECTION 1.1: TAXONOMÍA Y VOCABULARIO -->
+        <!-- SECTION 1: TAXONOMÍA E JERARQUÍA -->
         <section id="taxonomia" class="space-y-8">
             <div class="border-b border-slate-200 pb-4">
                 <div class="inline-block bg-blue-100 text-blue-800 text-xs font-extrabold px-3 py-1 rounded-full uppercase tracking-wider mb-2">
                     Tarea 1.1
                 </div>
                 <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900">
-                    Jerarquía de IA y Vocabulario Esencial para el Examen
+                    1. Taxonomía e Jerarquía de la Inteligencia Artificial
                 </h2>
                 <p class="text-slate-600 text-sm sm:text-base mt-2">
-                    La Inteligencia Artificial engloba distintas subdisciplinas. Identificar si un problema requiere reglas simples, aprendizaje supervisado o IA Generativa es el primer paso en la certificación AWS.
+                    La Inteligencia Artificial es un dominio amplio con capas concéntricas de especialización. Cada subconjunto resuelve un tipo de problema de negocio específico según los datos disponibles.
                 </p>
             </div>
 
-            <!-- Hierarchy HTML Cards Diagram -->
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
-                <div class="bg-slate-900 text-white p-5 rounded-xl border-t-4 border-slate-500 space-y-2">
-                    <span class="text-xs font-bold text-slate-400 uppercase">Capa Exterior</span>
-                    <h3 class="text-lg font-bold">1. Inteligencia Artificial</h3>
-                    <p class="text-xs text-slate-300 leading-relaxed">
-                        Sistemas informáticos amplios diseñados para simular capacidades cognitivas humanas (sistemas basados en reglas, lógica formal y aprendizaje automático).
+            <!-- Visual Nested Cards (Hierarchy) -->
+            <div class="bg-slate-900 text-white rounded-2xl p-6 sm:p-8 space-y-6 shadow-xl border border-slate-800">
+                <div class="border-2 border-slate-700 rounded-xl p-5 bg-slate-800/60">
+                    <div class="flex justify-between items-center mb-3">
+                        <span class="text-xs font-bold uppercase tracking-widest text-slate-400">Capa 1 (La Más Amplia)</span>
+                        <span class="bg-slate-700 text-slate-200 text-xs px-2.5 py-1 rounded font-mono">Reglas + Algoritmos</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">Inteligencia Artificial (IA)</h3>
+                    <p class="text-xs sm:text-sm text-slate-300 mb-4">
+                        Cualquier técnica informática que simule el razonamiento o comportamiento humano (sistemas expertos, lógica difusa y aprendizaje de máquinas).
                     </p>
-                </div>
 
-                <div class="bg-blue-900 text-white p-5 rounded-xl border-t-4 border-blue-400 space-y-2">
-                    <span class="text-xs font-bold text-blue-300 uppercase">Subconjunto Directo</span>
-                    <h3 class="text-lg font-bold">2. Machine Learning</h3>
-                    <p class="text-xs text-slate-200 leading-relaxed">
-                        Algoritmos que identifican patrones directamente a partir de datos estructurados sin ser programados de forma explícita.
-                    </p>
-                </div>
+                    <!-- Nested ML Layer -->
+                    <div class="border-2 border-blue-500 rounded-xl p-5 bg-blue-950/70">
+                        <div class="flex justify-between items-center mb-3">
+                            <span class="text-xs font-bold uppercase tracking-widest text-blue-400">Capa 2 (Subconjunto de IA)</span>
+                            <span class="bg-blue-900 text-blue-200 text-xs px-2.5 py-1 rounded font-mono">Datos Estructurados</span>
+                        </div>
+                        <h4 class="text-lg font-bold text-blue-100 mb-2">Machine Learning (ML Tradicional)</h4>
+                        <p class="text-xs sm:text-sm text-blue-200 mb-4">
+                            Algoritmos que aprenden patrones directamente desde datos sin ser programados explícitamente (ej. Regresión Lineal, Árboles de Decisión, Random Forest).
+                        </p>
 
-                <div class="bg-indigo-900 text-white p-5 rounded-xl border-t-4 border-indigo-400 space-y-2">
-                    <span class="text-xs font-bold text-indigo-300 uppercase">Especialización DL</span>
-                    <h3 class="text-lg font-bold">3. Deep Learning</h3>
-                    <p class="text-xs text-slate-200 leading-relaxed">
-                        Redes Neuronales Artificiales (ANN) multicapa avanzadas, óptimas para datos no estructurados como voz e imágenes.
-                    </p>
-                </div>
+                        <!-- Nested DL Layer -->
+                        <div class="border-2 border-indigo-500 rounded-xl p-5 bg-indigo-950/70">
+                            <div class="flex justify-between items-center mb-3">
+                                <span class="text-xs font-bold uppercase tracking-widest text-indigo-400">Capa 3 (Subconjunto de ML)</span>
+                                <span class="bg-indigo-900 text-indigo-200 text-xs px-2.5 py-1 rounded font-mono">Redes Neuronales (ANN)</span>
+                            </div>
+                            <h5 class="text-base font-bold text-indigo-100 mb-2">Deep Learning (DL)</h5>
+                            <p class="text-xs text-indigo-200 mb-4">
+                                Redes neuronales artificiales profundas compuestas de múltiples capas procesadoras. Excelente para datos no estructurados (visión por computador, audio).
+                            </p>
 
-                <div class="bg-cyan-900 text-white p-5 rounded-xl border-t-4 border-cyan-400 space-y-2">
-                    <span class="text-xs font-bold text-cyan-300 uppercase">Núcleo Generativo</span>
-                    <h3 class="text-lg font-bold">4. IA Generativa</h3>
-                    <p class="text-xs text-slate-200 leading-relaxed">
-                        Modelos de Deep Learning especializados en crear nuevo contenido sintético (texto, imágenes, código) en lugar de predecir o clasificar.
-                    </p>
+                            <!-- Nested GenAI Layer -->
+                            <div class="border-2 border-cyan-400 rounded-xl p-4 bg-cyan-950/80">
+                                <div class="flex justify-between items-center mb-2">
+                                    <span class="text-xs font-bold uppercase tracking-widest text-cyan-300">Capa 4 (Núcleo Actual)</span>
+                                    <span class="bg-cyan-900 text-cyan-100 text-xs px-2.5 py-1 rounded font-mono">Creación Sintética</span>
+                                </div>
+                                <h6 class="text-sm font-bold text-cyan-100 mb-1">IA Generativa (GenAI)</h6>
+                                <p class="text-xs text-cyan-200">
+                                    Modelos de Deep Learning (Transformers, Difusión) capacitados para <strong>generar nuevo contenido original</strong> (texto, imágenes, código, música) en lugar de solo clasificar o predecir.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
-            <!-- Essential Vocabulary Terms Grid -->
+            <!-- Key Concepts Grid -->
             <div class="bg-white rounded-xl shadow-md p-6 border border-slate-200">
                 <h3 class="text-lg font-bold text-slate-900 mb-4 border-b pb-2">
-                    Glosario Oficial de Términos (AWS AIF-C01)
+                    Vocabulario Crucial de Examen (AWS AIF-C01)
                 </h3>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-xs">
                     <div class="p-4 bg-slate-50 rounded-lg border border-slate-200">
-                        <strong class="text-blue-700 text-sm block mb-1">Feature (Característica)</strong>
-                        <p class="text-slate-600">Variable de entrada medible utilizada para realizar una predicción (ej. metros cuadrados de un inmueble o antigüedad de un vehículo).</p>
+                        <span class="font-bold text-blue-700 text-sm block mb-1">Feature (Característica)</span>
+                        <p class="text-slate-600">Variable de entrada medible utilizada por el modelo para calcular una predicción (ej. antigüedad de un vehículo, salario anual).</p>
                     </div>
 
                     <div class="p-4 bg-slate-50 rounded-lg border border-slate-200">
-                        <strong class="text-blue-700 text-sm block mb-1">Label / Target (Etiqueta Objetivo)</strong>
-                        <p class="text-slate-600">La respuesta correcta o el valor verdadero que el modelo supervisado intenta predecir (ej. precio final de la vivienda).</p>
+                        <span class="font-bold text-blue-700 text-sm block mb-1">Label / Target (Etiqueta)</span>
+                        <p class="text-slate-600">La respuesta correcta u objetivo real que el modelo supervisado intenta predecir (ej. "Fraudulenta", precio final en USD).</p>
                     </div>
 
                     <div class="p-4 bg-slate-50 rounded-lg border border-slate-200">
-                        <strong class="text-blue-700 text-sm block mb-1">Inferencia (Inference)</strong>
-                        <p class="text-slate-600">El proceso operativo en producción donde un modelo entrenado recibe nuevos datos de entrada y genera una predicción.</p>
+                        <span class="font-bold text-blue-700 text-sm block mb-1">Inferencia (Inference)</span>
+                        <p class="text-slate-600">El proceso en el cual un modelo ya entrenado recibe datos de entrada nuevos y genera predicciones en producción.</p>
                     </div>
 
                     <div class="p-4 bg-slate-50 rounded-lg border border-slate-200">
-                        <strong class="text-blue-700 text-sm block mb-1">Dataset de Entrenamiento</strong>
-                        <p class="text-slate-600">Conjunto principal de datos (normalmente 70-80%) utilizado por el algoritmo para aprender patrones e hiperparámetros.</p>
+                        <span class="font-bold text-blue-700 text-sm block mb-1">Dataset de Entrenamiento</span>
+                        <p class="text-slate-600">El subconjunto de datos (70-80%) con el cual el algoritmo ajusta sus parámetros internos y aprende patrones.</p>
                     </div>
 
                     <div class="p-4 bg-slate-50 rounded-lg border border-slate-200">
-                        <strong class="text-blue-700 text-sm block mb-1">Dataset de Validación</strong>
-                        <p class="text-slate-600">Datos no vistos en entrenamiento utilizados durante la fase de desarrollo para ajustar hiperparámetros y evitar el sobreajuste.</p>
+                        <span class="font-bold text-blue-700 text-sm block mb-1">Dataset de Validación</span>
+                        <p class="text-slate-600">Datos no vistos durante el entrenamiento empleados para ajustar hiperparámetros y detectar sobreajuste preliminar.</p>
                     </div>
 
                     <div class="p-4 bg-slate-50 rounded-lg border border-slate-200">
-                        <strong class="text-blue-700 text-sm block mb-1">Dataset de Prueba (Test)</strong>
-                        <p class="text-slate-600">Evaluación final e imparcial del rendimiento generalizable del modelo antes del despliegue en producción.</p>
+                        <span class="font-bold text-blue-700 text-sm block mb-1">Dataset de Prueba (Test)</span>
+                        <p class="text-slate-600">Evaluación imparcial e independiente del rendimiento generalizable final antes del despliegue en producción.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- SECTION 1.2: PARADIGMAS DE MACHINE LEARNING -->
+        <!-- SECTION 2: PARADIGMAS DE MACHINE LEARNING -->
         <section id="paradigmas" class="space-y-8">
             <div class="border-b border-slate-200 pb-4">
                 <div class="inline-block bg-indigo-100 text-indigo-800 text-xs font-extrabold px-3 py-1 rounded-full uppercase tracking-wider mb-2">
                     Tarea 1.2
                 </div>
                 <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900">
-                    Tipos de Aprendizaje Automático (ML Paradigms)
+                    2. Paradigmas de Aprendizaje Automático
                 </h2>
                 <p class="text-slate-600 text-sm sm:text-base mt-2">
-                    Cada problema de negocio requiere un paradigma distinto según la disponibilidad de etiquetas e interacción con el entorno.
+                    El método de aprendizaje se selecciona en función de la presencia de etiquetas objetivo y el nivel de interacción requerida con el entorno.
                 </p>
             </div>
 
-            <!-- 3 Columns Paradigms -->
+            <!-- Paradigms Cards -->
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <!-- Supervised -->
                 <div class="bg-white rounded-xl shadow-md p-6 border-t-4 border-blue-600 space-y-4">
                     <div class="flex justify-between items-center">
-                        <h3 class="font-bold text-slate-900 text-base">1. Aprendizaje Supervisado</h3>
-                        <span class="bg-blue-100 text-blue-800 text-xs px-2 py-0.5 rounded font-semibold">Datos Etiquetados</span>
+                        <h3 class="font-bold text-slate-900 text-base">Aprendizaje Supervisado</h3>
+                        <span class="bg-blue-100 text-blue-800 text-xs px-2.5 py-1 rounded font-bold">Datos Etiquetados</span>
                     </div>
                     <p class="text-xs text-slate-600 leading-relaxed">
-                        El algoritmo aprende a partir de parejas de entrada y respuesta correcta (<em>Inputs + Correct Labels</em>).
+                        El algoritmo aprende a partir de pares de entrada y salida correcta (<em>Inputs + Labels</em>).
                     </p>
                     <div class="space-y-2 text-xs border-t pt-3">
                         <div class="p-2 bg-slate-50 rounded">
-                            <strong class="text-slate-800">Clasificación:</strong> Categorías discretas (ej. Detección de Spam, Diagnóstico médico Sí/No).
+                            <strong class="text-slate-900">Clasificación:</strong> Salidas categóricas discretas (ej. Spam vs No Spam, Detección de Fraude).
                         </div>
                         <div class="p-2 bg-slate-50 rounded">
-                            <strong class="text-slate-800">Regresión:</strong> Valores numéricos continuos (ej. Proyección de ventas, estimación de precios).
+                            <strong class="text-slate-900">Regresión:</strong> Salidas numéricas continuas (ej. Estimación de precios, proyección de ventas).
                         </div>
                     </div>
                 </div>
@@ -249,18 +263,18 @@
                 <!-- Unsupervised -->
                 <div class="bg-white rounded-xl shadow-md p-6 border-t-4 border-cyan-500 space-y-4">
                     <div class="flex justify-between items-center">
-                        <h3 class="font-bold text-slate-900 text-base">2. Aprendizaje No Supervisado</h3>
-                        <span class="bg-cyan-100 text-cyan-800 text-xs px-2 py-0.5 rounded font-semibold">Sin Etiquetas</span>
+                        <h3 class="font-bold text-slate-900 text-base">Aprendizaje No Supervisado</h3>
+                        <span class="bg-cyan-100 text-cyan-800 text-xs px-2.5 py-1 rounded font-bold">Sin Etiquetas</span>
                     </div>
                     <p class="text-xs text-slate-600 leading-relaxed">
-                        El algoritmo descubre estructuras, patrones ocultos o relaciones internas en datos sin etiquetar.
+                        El algoritmo descubre estructuras ocultas, agrupaciones o patrones inherentes en los datos.
                     </p>
                     <div class="space-y-2 text-xs border-t pt-3">
                         <div class="p-2 bg-slate-50 rounded">
-                            <strong class="text-slate-800">Agrupamiento (Clustering):</strong> Segmentación de clientes según comportamiento de compra (K-Means).
+                            <strong class="text-slate-900">Agrupamiento (Clustering):</strong> Segmentación de clientes según comportamientos (K-Means).
                         </div>
                         <div class="p-2 bg-slate-50 rounded">
-                            <strong class="text-slate-800">Reducción de Dimensionalidad:</strong> Compresión de variables (PCA) y Detección de Anomalías.
+                            <strong class="text-slate-900">Reducción de Dimensionalidad:</strong> PCA para simplificar variables y detectar anomalías.
                         </div>
                     </div>
                 </div>
@@ -268,38 +282,37 @@
                 <!-- Reinforcement -->
                 <div class="bg-white rounded-xl shadow-md p-6 border-t-4 border-indigo-600 space-y-4">
                     <div class="flex justify-between items-center">
-                        <h3 class="font-bold text-slate-900 text-base">3. Aprendizaje por Refuerzo</h3>
-                        <span class="bg-indigo-100 text-indigo-800 text-xs px-2 py-0.5 rounded font-semibold">Recompensa / Castigo</span>
+                        <h3 class="font-bold text-slate-900 text-base">Aprendizaje por Refuerzo</h3>
+                        <span class="bg-indigo-100 text-indigo-800 text-xs px-2.5 py-1 rounded font-bold">Recompensa / Castigo</span>
                     </div>
                     <p class="text-xs text-slate-600 leading-relaxed">
-                        Un <strong>Agente</strong> toma decisiones secuenciales en un <strong>Entorno</strong> dinámico para maximizar una <strong>Recompensa acumulada</strong>.
+                        Un <strong>Agente</strong> interactúa secuencialmente con un <strong>Entorno</strong> para maximizar una <strong>Recompensa</strong> acumulada.
                     </p>
                     <div class="space-y-2 text-xs border-t pt-3">
                         <div class="p-2 bg-slate-50 rounded">
-                            <strong class="text-slate-800">Elementos Clave:</strong> Estado, Acción, Recompensa, Entorno, Agente.
+                            <strong class="text-slate-900">Componentes:</strong> Agente, Estado, Acción, Entorno, Recompensa.
                         </div>
                         <div class="p-2 bg-slate-50 rounded">
-                            <strong class="text-slate-800">Casos AWS:</strong> Robótica industrial, logística automatizada y <strong>AWS DeepRacer</strong>.
+                            <strong class="text-slate-900">Ejemplo AWS:</strong> Robótica industrial, optimización de logística y <strong>AWS DeepRacer</strong>.
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Doughnut Chart: Proportions -->
+            <!-- Doughnut Chart Section -->
             <div class="bg-white rounded-xl shadow-md p-6 border border-slate-200">
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
                     <div>
                         <h3 class="text-lg font-bold text-slate-900 mb-2">
-                            Distribución Típica de Casos de Uso Empresariales
+                            Distribución de Casos de Uso Empresariales
                         </h3>
                         <p class="text-xs text-slate-600 mb-4 leading-relaxed">
-                            En la industria tradicional, el aprendizaje supervisado representa más del 70% de las aplicaciones desplegadas en producción debido a la alta demanda de predicción cuantitativa y clasificación de clientes.
+                            En las aplicaciones tradicionales de negocios, el aprendizaje supervisado representa más del 70% de las implementaciones activas debido al predominio de tareas numéricas y categóricas.
                         </p>
                         <div class="p-3 bg-blue-50 border border-blue-200 rounded-lg text-xs text-blue-900">
-                            <strong>Pregunta Frecuente del Examen:</strong> Si cuentas con un historial de transacciones bancarias etiquetadas como <em>"Fraudulenta"</em> o <em>"Legítima"</em>, debes seleccionar <strong>Aprendizaje Supervisado (Clasificación Binaria)</strong>.
+                            <strong>Clave del Examen:</strong> Si en la pregunta mencionan datos históricos etiquetados (ej. "registros de transacciones marcadas como legítimas o fraudulentas"), la respuesta correcta es <strong>Aprendizaje Supervisado (Clasificación Binaria)</strong>.
                         </div>
                     </div>
-
                     <div class="chart-container">
                         <canvas id="paradigmsDoughnutChart"></canvas>
                     </div>
@@ -307,84 +320,108 @@
             </div>
         </section>
 
-        <!-- SECTION 1.3: CICLO DE VIDA DEL ML TRADICIONAL -->
+        <!-- SECTION 3: CICLO DE VIDA DE ML & MLOPS -->
         <section id="ciclo-vida" class="space-y-8">
             <div class="border-b border-slate-200 pb-4">
                 <div class="inline-block bg-emerald-100 text-emerald-800 text-xs font-extrabold px-3 py-1 rounded-full uppercase tracking-wider mb-2">
                     Tarea 1.3
                 </div>
                 <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900">
-                    Ciclo de Vida del Machine Learning Tradicional & MLOps
+                    3. Ciclo de Vida del ML Tradicional, Preprocesamiento & MLOps
                 </h2>
                 <p class="text-slate-600 text-sm sm:text-base mt-2">
-                    El proceso de ML es iterativo. Desde la definición del problema de negocio hasta el monitoreo de la deriva de datos en producción.
+                    El proceso de Machine Learning es iterativo. Incluye la preparación adecuada de datos, mitigación de sesgos y monitoreo continuo en producción.
                 </p>
             </div>
 
-            <!-- Workflow Steps (HTML Grid) -->
+            <!-- Workflow Steps Cards -->
             <div class="grid grid-cols-1 md:grid-cols-5 gap-4">
                 <div class="bg-white p-5 rounded-xl border-l-4 border-blue-600 shadow-sm space-y-2">
                     <span class="text-xs font-black text-blue-600">PASO 1</span>
-                    <h4 class="font-bold text-slate-900 text-sm">Definición del Problema</h4>
-                    <p class="text-xs text-slate-600">Convertir un KPI o necesidad empresarial en una tarea concreta de Machine Learning.</p>
+                    <h4 class="font-bold text-slate-900 text-sm">Definición de Negocio</h4>
+                    <p class="text-xs text-slate-600">Convertir un KPI empresarial en una tarea concreta de ML.</p>
                 </div>
 
                 <div class="bg-white p-5 rounded-xl border-l-4 border-cyan-500 shadow-sm space-y-2">
                     <span class="text-xs font-black text-cyan-600">PASO 2</span>
-                    <h4 class="font-bold text-slate-900 text-sm">Ingestión & Datos</h4>
-                    <p class="text-xs text-slate-600">Limpieza, One-Hot Encoding, normalización de datos y separación (Train/Val/Test).</p>
+                    <h4 class="font-bold text-slate-900 text-sm">Preparación de Datos</h4>
+                    <p class="text-xs text-slate-600">Limpieza, One-Hot Encoding, normalización y escalado.</p>
                 </div>
 
                 <div class="bg-white p-5 rounded-xl border-l-4 border-indigo-600 shadow-sm space-y-2">
                     <span class="text-xs font-black text-indigo-600">PASO 3</span>
                     <h4 class="font-bold text-slate-900 text-sm">Entrenamiento</h4>
-                    <p class="text-xs text-slate-600">Ajuste de parámetros, minimización de función de pérdida y optimización con SageMaker.</p>
+                    <p class="text-xs text-slate-600">Ajuste de parámetros y minimización de función de pérdida.</p>
                 </div>
 
                 <div class="bg-white p-5 rounded-xl border-l-4 border-amber-500 shadow-sm space-y-2">
                     <span class="text-xs font-black text-amber-600">PASO 4</span>
                     <h4 class="font-bold text-slate-900 text-sm">Evaluación</h4>
-                    <p class="text-xs text-slate-600">Verificación de métricas (F1-Score, RMSE) en datos de prueba antes del despliegue.</p>
+                    <p class="text-xs text-slate-600">Medición con dataset de prueba (F1-Score, RMSE).</p>
                 </div>
 
                 <div class="bg-white p-5 rounded-xl border-l-4 border-emerald-500 shadow-sm space-y-2">
                     <span class="text-xs font-black text-emerald-600">PASO 5</span>
-                    <h4 class="font-bold text-slate-900 text-sm">Despliegue & MLOps</h4>
-                    <p class="text-xs text-slate-600">Inferencia en tiempo real o por lotes y monitoreo constante de la calidad del modelo.</p>
+                    <h4 class="font-bold text-slate-900 text-sm">Despliegue & Monitoreo</h4>
+                    <p class="text-xs text-slate-600">Inferencia en tiempo real/lotes y control de derívas.</p>
+                </div>
+            </div>
+
+            <!-- Deep Dive Data Preparation Cards -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-white rounded-xl shadow-md p-6 border border-slate-200 space-y-2">
+                    <h4 class="font-bold text-slate-900 text-sm text-blue-700">One-Hot Encoding vs Ordinal</h4>
+                    <p class="text-xs text-slate-600 leading-relaxed">
+                        Transforma variables categóricas (ej. ["Rojo", "Verde", "Azul"]) en vectores binarios (0 y 1) para evitar que el algoritmo asuma un orden numérico inexistente.
+                    </p>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-md p-6 border border-slate-200 space-y-2">
+                    <h4 class="font-bold text-slate-900 text-sm text-blue-700">Fuga de Datos (Data Leakage)</h4>
+                    <p class="text-xs text-slate-600 leading-relaxed">
+                        Ocurre cuando información del dataset de prueba o del futuro se cuela en el entrenamiento. Genera métricas engañosamente elevadas que fallan en producción.
+                    </p>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-md p-6 border border-slate-200 space-y-2">
+                    <h4 class="font-bold text-slate-900 text-sm text-blue-700">Desequilibrio de Clases</h4>
+                    <p class="text-xs text-slate-600 leading-relaxed">
+                        Cuando una clase es abrumadoramente mayoritaria (ej. 99% transacciones normales). Se resuelve con Oversampling (SMOTE) o Undersampling.
+                    </p>
                 </div>
             </div>
 
             <!-- Drift Callout Cards -->
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div class="bg-amber-50 rounded-xl p-6 border border-amber-200">
-                    <h4 class="font-bold text-amber-900 text-base mb-2">1. Deriva de Datos (Data Drift)</h4>
+                    <h4 class="font-bold text-amber-900 text-base mb-2">Deriva de Datos (Data Drift)</h4>
                     <p class="text-xs text-amber-950 leading-relaxed">
-                        Ocurre cuando las propiedades estadísticas de los datos de entrada cambian en producción con respecto a los datos con los que se entrenó el modelo. 
-                        <em>Ejemplo: Cambios drásticos en el comportamiento de compra de los consumidores tras una pandemia.</em>
+                        Ocurre cuando las propiedades estadísticas de los datos de entrada en producción cambian con respecto a los datos de entrenamiento. 
+                        <em>Ejemplo: Cambios drásticos en el comportamiento de compra de clientes tras una crisis económica.</em>
                     </p>
                 </div>
 
                 <div class="bg-rose-50 rounded-xl p-6 border border-rose-200">
-                    <h4 class="font-bold text-rose-900 text-base mb-2">2. Deriva de Concepto (Concept Drift)</h4>
+                    <h4 class="font-bold text-rose-900 text-base mb-2">Deriva de Concepto (Concept Drift)</h4>
                     <p class="text-xs text-rose-950 leading-relaxed">
-                        Ocurre cuando la relación estadística entre las variables de entrada (Features) y la variable objetivo (Label) cambia por completo. 
-                        <em>Ejemplo: Lo que antes se consideraba una transacción financiera legítima ahora es una nueva modalidad de fraude.</em>
+                        Ocurre cuando la relación estadística entre las variables de entrada y la variable objetivo cambia totalmente. 
+                        <em>Ejemplo: Lo que antes se clasificaba como un patrón de compra normal ahora es una nueva táctica de fraude.</em>
                     </p>
                 </div>
             </div>
         </section>
 
-        <!-- SECTION 1.4: MÉTRICAS Y DILEMAS DE AJUSTE -->
+        <!-- SECTION 4: MÉTRICAS Y DILEMAS DE AJUSTE -->
         <section id="metricas" class="space-y-8">
             <div class="border-b border-slate-200 pb-4">
                 <div class="inline-block bg-cyan-100 text-cyan-800 text-xs font-extrabold px-3 py-1 rounded-full uppercase tracking-wider mb-2">
                     Tarea 1.4
                 </div>
                 <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900">
-                    Métricas de Evaluación, Matriz de Confusión y Dilemas de Ajuste
+                    4. Diagnósticos de Ajuste, Matriz de Confusión & Métricas
                 </h2>
                 <p class="text-slate-600 text-sm sm:text-base mt-2">
-                    El compromiso entre Sesgo (Bias) y Varianza determina si un modelo sufre de sobreajuste o subajuste. Aprende a seleccionar la métrica adecuada según el impacto de los errores de Tipo I y Tipo II.
+                    El balance entre Sesgo (Bias) y Varianza (Variance) define si un modelo padece de Subajuste o Sobreajuste. Comprender la matriz de confusión es indispensable para el examen.
                 </p>
             </div>
 
@@ -396,18 +433,18 @@
                             Curva de Diagnóstico: Sobreajuste vs. Subajuste
                         </h3>
                         <p class="text-xs text-slate-600 mb-4 leading-relaxed">
-                            A medida que aumenta la complejidad del modelo, el error de entrenamiento disminuye continuamente. Sin embargo, si el modelo es demasiado complejo, memoriza el ruido y el error de validación comienza a subir (Overfitting).
+                            Al aumentar la complejidad del modelo, el error de entrenamiento cae de forma continua. Sin embargo, si la complejidad es excesiva, el modelo memoriza el ruido y el error de validación vuelve a subir.
                         </p>
                         
                         <div class="space-y-2 text-xs">
                             <div class="p-2.5 bg-rose-50 border border-rose-200 rounded">
-                                <strong class="text-rose-900">Subajuste (Underfitting):</strong> Alto error en Entrenamiento y Test. El modelo es demasiado simple. <em>Solución: Aumentar la complejidad o añadir más características.</em>
+                                <strong class="text-rose-900">Subajuste (Underfitting):</strong> Alto error en entrenamiento y validación (Alto Sesgo). <em>Solución: Aumentar la complejidad del modelo o añadir más características.</em>
                             </div>
                             <div class="p-2.5 bg-emerald-50 border border-emerald-200 rounded">
-                                <strong class="text-emerald-900">Punto Óptimo:</strong> Mínimo error de validación. Buena capacidad de generalización sobre datos no vistos.
+                                <strong class="text-emerald-900">Punto Óptimo:</strong> Mínimo error de validación. Excelente capacidad de generalización sobre datos no vistos.
                             </div>
                             <div class="p-2.5 bg-amber-50 border border-amber-200 rounded">
-                                <strong class="text-amber-900">Sobreajuste (Overfitting):</strong> Error casi cero en Entrenamiento pero alto en Test. Memorizó el ruido. <em>Solución: Regularización, dropout o reducir características.</em>
+                                <strong class="text-amber-900">Sobreajuste (Overfitting):</strong> Error casi nulo en entrenamiento pero elevado en validación (Alta Varianza). <em>Solución: Regularización, dropout o reducir características.</em>
                             </div>
                         </div>
                     </div>
@@ -418,9 +455,9 @@
                 </div>
             </div>
 
-            <!-- Confusion Matrix Breakdown & Chart -->
+            <!-- Confusion Matrix Breakdown & Bar Chart -->
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                <!-- Matrix visual table -->
+                <!-- Visual Confusion Matrix Table -->
                 <div class="bg-white rounded-xl shadow-md p-6 border border-slate-200 space-y-4">
                     <h3 class="text-lg font-bold text-slate-900 border-b pb-2">
                         Matriz de Confusión & Tipos de Error
@@ -446,18 +483,18 @@
                     </div>
 
                     <div class="space-y-2 text-xs text-slate-700 pt-2">
-                        <p><strong>Precisión (Precision):</strong> TP / (TP + FP) &rarr; Crucial cuando los Falsos Positivos son muy costosos.</p>
-                        <p><strong>Exhaustividad (Recall / Sensibilidad):</strong> TP / (TP + FN) &rarr; Crucial en medicina y detecciones donde omitir un caso positivo es crítico.</p>
+                        <p><strong>Precisión (Precision):</strong> TP / (TP + FP) &rarr; Utilizar cuando los Falsos Positivos son altamente costosos.</p>
+                        <p><strong>Exhaustividad (Recall):</strong> TP / (TP + FN) &rarr; Crucial cuando omitir un caso positivo real es inaceptable.</p>
                     </div>
                 </div>
 
-                <!-- Classification Metrics Bar Chart -->
+                <!-- Classification Metrics Chart -->
                 <div class="bg-white rounded-xl shadow-md p-6 border border-slate-200">
                     <h3 class="text-lg font-bold text-slate-900 mb-2">
                         Comportamiento de Métricas de Clasificación
                     </h3>
                     <p class="text-xs text-slate-600 mb-4">
-                        Comparación del rendimiento relativo de las métricas en un dataset de evaluación balanceado.
+                        Comparación de métricas evaluadas sobre conjuntos de prueba balanceados.
                     </p>
                     <div class="chart-container">
                         <canvas id="classificationMetricsChart"></canvas>
@@ -465,28 +502,28 @@
                 </div>
             </div>
 
-            <!-- Regression Metrics Horizontal Chart -->
+            <!-- Regression Metrics Chart -->
             <div class="bg-white rounded-xl shadow-md p-6 border border-slate-200">
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
                     <div>
                         <h3 class="text-lg font-bold text-slate-900 mb-2">
-                            Métricas de Regresión y Penalización de Outliers
+                            Métricas de Regresión & Penalización de Outliers
                         </h3>
                         <p class="text-xs text-slate-600 mb-4 leading-relaxed">
-                            En tareas de regresión (predicción numérica continua), la elección de la métrica determina cómo se penalizan los errores grandes (vales atípicos).
+                            Para predicciones numéricas continuas, la elección de la métrica define cómo se penalizan los errores extremos o atípicos.
                         </p>
                         <div class="space-y-3 text-xs">
                             <div class="p-2.5 bg-slate-50 border rounded">
                                 <strong class="text-slate-900 block">MAE (Error Absoluto Medio):</strong>
-                                Promedio directo de diferencias absolutas. Fácil de interpretar y robusto frente a valores atípicos.
+                                Promedio directo de diferencias absolutas. Fácil interpretación y robusto ante valores atípicos.
                             </div>
                             <div class="p-2.5 bg-slate-50 border rounded">
                                 <strong class="text-slate-900 block">MSE (Error Cuadrático Medio):</strong>
-                                Eleva los errores al cuadrado. Penaliza con extrema dureza las desviaciones grandes o errores atípicos.
+                                Eleva errores al cuadrado. Penaliza severamente los errores grandes o atípicos.
                             </div>
                             <div class="p-2.5 bg-slate-50 border rounded">
                                 <strong class="text-slate-900 block">RMSE (Raíz del Error Cuadrático Medio):</strong>
-                                Aplicación de raíz cuadrada sobre MSE. Devuelve la métrica a las unidades de medida originales de los datos.
+                                Aplica raíz cuadrada al MSE. Vuelve a representar el error en las unidades originales de medida.
                             </div>
                         </div>
                     </div>
@@ -498,59 +535,55 @@
             </div>
         </section>
 
-        <!-- SECTION 1.5: ML TRADICIONAL VS IA GENERATIVA EN AWS -->
+        <!-- SECTION 5: SELECCIÓN EN AWS -->
         <section id="decision-aws" class="space-y-8">
             <div class="border-b border-slate-200 pb-4">
                 <div class="inline-block bg-amber-100 text-amber-800 text-xs font-extrabold px-3 py-1 rounded-full uppercase tracking-wider mb-2">
                     Tarea 1.5
                 </div>
                 <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900">
-                    Criterios de Selección: ML Tradicional vs. IA Generativa en AWS
+                    5. Selección de Soluciones & Ecosistema de Servicios AWS
                 </h2>
                 <p class="text-slate-600 text-sm sm:text-base mt-2">
-                    Elegir el servicio y enfoque técnico óptimo garantiza eficiencia de costos y cumplimiento de SLAs en AWS.
+                    Elegir entre ML Tradicional (SageMaker) e IA Generativa (Bedrock / Amazon Q) depende de la estructura de datos, el costo y el determinismo requerido.
                 </p>
             </div>
 
-            <!-- Comparison Cards -->
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <!-- SageMaker Traditional ML -->
-                <div class="bg-white rounded-xl p-6 shadow-md border-t-4 border-blue-600 space-y-4">
-                    <div class="flex justify-between items-center">
-                        <h3 class="text-xl font-bold text-slate-900">Machine Learning Tradicional</h3>
-                        <span class="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full font-bold">Amazon SageMaker AI</span>
-                    </div>
-                    <ul class="text-xs space-y-2.5 text-slate-700">
-                        <li class="flex items-start"><span class="text-blue-600 font-bold mr-2">✔</span><strong>Datos de Entrada:</strong> Tablas numéricas estructuradas, registros relacionales, variables categóricas.</li>
-                        <li class="flex items-start"><span class="text-blue-600 font-bold mr-2">✔</span><strong>Naturaleza de Salida:</strong> Predicciones deterministas, valores numéricos exactos o clasificaciones fijas.</li>
-                        <li class="flex items-start"><span class="text-blue-600 font-bold mr-2">✔</span><strong>Costo Computacional:</strong> Bajo, predecible y altamente optimizable.</li>
-                        <li class="flex items-start"><span class="text-blue-600 font-bold mr-2">✔</span><strong>Casos Típicos:</strong> Estimación de ventas, detección de fraudes bancarios, riesgo crediticio, retención de clientes (Churn).</li>
-                    </ul>
+            <!-- AWS Services Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+                <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm space-y-2">
+                    <span class="text-xs font-bold text-blue-600 uppercase">SageMaker Data Wrangler</span>
+                    <h4 class="font-bold text-slate-900 text-sm">Preparación de Datos</h4>
+                    <p class="text-xs text-slate-600">Ingestión, transformación visual y limpieza de datos sin código.</p>
                 </div>
 
-                <!-- Bedrock GenAI -->
-                <div class="bg-white rounded-xl p-6 shadow-md border-t-4 border-amber-500 space-y-4">
-                    <div class="flex justify-between items-center">
-                        <h3 class="text-xl font-bold text-slate-900">IA Generativa (LLMs / FMs)</h3>
-                        <span class="bg-amber-100 text-amber-800 text-xs px-3 py-1 rounded-full font-bold">Amazon Bedrock / Q</span>
-                    </div>
-                    <ul class="text-xs space-y-2.5 text-slate-700">
-                        <li class="flex items-start"><span class="text-amber-600 font-bold mr-2">✔</span><strong>Datos de Entrada:</strong> Texto libre en lenguaje natural, imágenes, audio, archivos de código.</li>
-                        <li class="flex items-start"><span class="text-amber-600 font-bold mr-2">✔</span><strong>Naturaleza de Salida:</strong> Respuestas probabilísticas y creación de contenido sintético original.</li>
-                        <li class="flex items-start"><span class="text-amber-600 font-bold mr-2">✔</span><strong>Costo Computacional:</strong> Elevado, basado en procesamiento de tokens o throughput aprovisionado.</li>
-                        <li class="flex items-start"><span class="text-amber-600 font-bold mr-2">✔</span><strong>Casos Típicos:</strong> Asistentes conversacionales, resúmenes automáticos, generación de código y búsqueda semántica (RAG).</li>
-                    </ul>
+                <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm space-y-2">
+                    <span class="text-xs font-bold text-blue-600 uppercase">SageMaker Autopilot</span>
+                    <h4 class="font-bold text-slate-900 text-sm">AutoML Automatizado</h4>
+                    <p class="text-xs text-slate-600">Explora, entrena y ajusta automáticamente los mejores modelos tradicionales.</p>
+                </div>
+
+                <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm space-y-2">
+                    <span class="text-xs font-bold text-blue-600 uppercase">SageMaker Clarify</span>
+                    <h4 class="font-bold text-slate-900 text-sm">Sesgo & Explicabilidad</h4>
+                    <p class="text-xs text-slate-600">Detecta sesgos en datos y proporciona interpretabilidad (valores SHAP).</p>
+                </div>
+
+                <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm space-y-2">
+                    <span class="text-xs font-bold text-blue-600 uppercase">SageMaker Model Monitor</span>
+                    <h4 class="font-bold text-slate-900 text-sm">Control de Derivas</h4>
+                    <p class="text-xs text-slate-600">Supervisa en producción Data Drift y Concept Drift en endpoints activos.</p>
                 </div>
             </div>
 
-            <!-- Radar Chart Comparative Profile -->
+            <!-- Comparative Radar Chart -->
             <div class="bg-white rounded-xl shadow-md p-6 border border-slate-200">
                 <div class="max-w-2xl mx-auto">
                     <h3 class="text-lg font-bold text-slate-900 text-center mb-1">
-                        Perfil Comparativo Multidimensional de Soluciones
+                        Perfil Comparativo: ML Tradicional vs. IA Generativa
                     </h3>
                     <p class="text-xs text-slate-600 text-center mb-4">
-                        Evaluación entre ML Tradicional (SageMaker) e IA Generativa (Bedrock) en los criterios clave del examen AWS.
+                        Evaluación multidimensional según los criterios del examen AWS AIF-C01.
                     </p>
                     <div class="chart-container">
                         <canvas id="decisionRadarChart"></canvas>
@@ -562,16 +595,16 @@
     </main>
 
     <!-- Footer -->
-    <footer class="gradient-bg text-slate-400 py-8 border-t border-slate-800 text-center text-xs">
+    <footer class="hero-gradient text-slate-400 py-8 border-t border-slate-800 text-center text-xs">
         <div class="max-w-7xl mx-auto px-4">
-            <p class="text-slate-300 font-bold mb-1">Guía de Estudio Dominio 1 - AWS Certified AI Practitioner (AIF-C01)</p>
+            <p class="text-slate-300 font-bold mb-1">Esquema Visual Completo Dominio 1 - AWS Certified AI Practitioner (AIF-C01)</p>
             <p>Generado estrictamente en formato SPA con HTML5, Tailwind CSS y Chart.js sin dependencias SVG ni Mermaid JS.</p>
         </div>
     </footer>
 
-    <!-- JavaScript Logic for Chart.js -->
+    <!-- JavaScript Logic -->
     <script>
-        // Helper function for label wrapping (> 16 characters requirement)
+        // Label Wrapping Helper (>16 characters requirement)
         function wrapLabel(str, maxLen = 16) {
             if (typeof str !== 'string' || str.length <= maxLen) return str;
             const words = str.split(' ');
@@ -608,7 +641,7 @@
             }
         };
 
-        // Chart 1: Doughnut Chart - Enterprise ML Paradigms Distribution
+        // Chart 1: Doughnut Chart - Paradigms Distribution
         const rawParadigms = [
             'Aprendizaje Supervisado (Clasificación/Regresión)',
             'Aprendizaje No Supervisado (Clustering/PCA)',
@@ -622,7 +655,7 @@
                 labels: wrappedParadigms,
                 datasets: [{
                     data: [72, 20, 8],
-                    backgroundColor: ['#2563eb', '#06b6d4', '#4f46e5']
+                    backgroundColor: ['#2563eb', '#0891b2', '#4f46e5']
                 }]
             },
             options: {
@@ -635,7 +668,7 @@
             }
         });
 
-        // Chart 2: Line Chart - Fitting Diagnosis Curve (Overfitting / Underfitting)
+        // Chart 2: Line Chart - Fitting Diagnosis Curve
         const rawFittingLabels = [
             'Baja (Modelo Muy Simple)',
             'Media-Baja',
@@ -661,8 +694,8 @@
                     {
                         label: 'Error de Validación / Test',
                         data: [90, 50, 22, 48, 88],
-                        borderColor: '#f59e0b',
-                        backgroundColor: 'rgba(245, 158, 11, 0.1)',
+                        borderColor: '#d97706',
+                        backgroundColor: 'rgba(217, 119, 6, 0.1)',
                         tension: 0.3,
                         fill: true
                     }
@@ -700,9 +733,9 @@
             data: {
                 labels: wrappedClassMetrics,
                 datasets: [{
-                    label: 'Rendimiento Relativo en Datos de Prueba (%)',
+                    label: 'Puntuación (%) en Evaluación',
                     data: [88, 92, 85, 88.4],
-                    backgroundColor: ['#94a3b8', '#2563eb', '#06b6d4', '#4f46e5'],
+                    backgroundColor: ['#64748b', '#2563eb', '#0891b2', '#4f46e5'],
                     borderRadius: 6
                 }]
             },
@@ -719,7 +752,7 @@
             }
         });
 
-        // Chart 4: Horizontal Bar Chart - Regression Metrics Sensitivity
+        // Chart 4: Horizontal Bar Chart - Regression Metrics
         const rawRegMetrics = [
             'MAE (Error Absoluto)',
             'MSE (Error Cuadrático)',
@@ -734,7 +767,7 @@
                 datasets: [{
                     label: 'Sensibilidad a Valos Atípicos (Outliers)',
                     data: [35, 95, 75],
-                    backgroundColor: ['#10b981', '#f43f5e', '#f59e0b'],
+                    backgroundColor: ['#059669', '#e11d48', '#d97706'],
                     borderRadius: 4
                 }]
             },
@@ -752,7 +785,7 @@
             }
         });
 
-        // Chart 5: Radar Chart - Traditional ML vs Generative AI Selection
+        // Chart 5: Radar Chart - Selection Profile
         const rawRadarMetrics = [
             'Determinismo de Salida',
             'Eficiencia de Costos Computacionales',
@@ -776,8 +809,8 @@
                     {
                         label: 'IA Generativa (Bedrock)',
                         data: [25, 40, 30, 95, 98],
-                        borderColor: '#f59e0b',
-                        backgroundColor: 'rgba(245, 158, 11, 0.2)'
+                        borderColor: '#d97706',
+                        backgroundColor: 'rgba(217, 119, 6, 0.2)'
                     }
                 ]
             },
