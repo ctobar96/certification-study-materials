@@ -10,6 +10,7 @@ El objetivo es centralizar apuntes, ejercicios prácticos, laboratorios, cuestio
 ![Status](https://img.shields.io/badge/Status-Active-success)
 ![License](https://img.shields.io/badge/License-MIT-blue)
 
+
 ## Certificaciones
 ### AWS
 
